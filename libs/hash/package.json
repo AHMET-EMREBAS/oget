@@ -1,15 +1,9 @@
 {
-  "name": "@oget/db",
+  "name": "@oget/hash",
   "version": "0.0.1",
-  "peerDependencies": {
-    "@oget/type": "workspace:^",
-    "typeorm": "^0.3.20"
-  },
   "dependencies": {
-    "better-sqlite3": "^11.3.0",
-    "pg": "^8.13.0",
-    "tslib": "^2.3.0",
-    "uuid": "^10.0.0"
+    "bcrypt": "^5.1.1",
+    "tslib": "^2.3.0"
   },
   "type": "commonjs",
   "main": "./dist/index.js",
@@ -19,7 +13,7 @@
     "!**/*.tsbuildinfo"
   ],
   "nx": {
-    "name": "db",
+    "name": "hash",
     "targets": {
       "test": {
         "executor": "@nx/vite:test",
@@ -27,12 +21,12 @@
           "{options.reportsDirectory}"
         ],
         "options": {
-          "reportsDirectory": "../../coverage/libs/db"
+          "reportsDirectory": "../../coverage/libs/hash"
         }
       }
     }
   },
   "devDependencies": {
-    "@types/uuid": "^10.0.0"
+    "@types/bcrypt": "^5.0.2"
   }
 }

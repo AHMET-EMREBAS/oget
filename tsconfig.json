@@ -44,6 +44,9 @@
     },
     {
       "path": "./examples/auth-sample"
+    },
+    {
+      "path": "./libs/hash"
     }
   ]
 }

@@ -1,4 +1,13 @@
-export type StringFormat = string;
+import { Icon, InputComponent } from '../ui';
+
+export type StringFormat =
+  | 'email'
+  | 'password'
+  | 'phone'
+  | 'short'
+  | 'long'
+  | 'barcode'
+  | 'uuid';
 
 export type CommonCheckOptions = {
   isArray?: boolean;
@@ -10,6 +19,7 @@ export type StringCheckOptions = {
   minLength?: number;
   maxLength?: number;
   format?: string;
+  enum?: string[];
 };
 
 export type NumberCheckOptions = {
@@ -21,16 +31,20 @@ export type NumberCheckOptions = {
 
 export type BooleanCheckOptions = {
   type: 'boolean';
+  isString?: boolean;
 };
+
 export type DateCheckOptions = {
   type: 'date';
   future?: boolean;
   past?: boolean;
+  isString?: boolean;
 };
 
 export type ObjectCheckOptions = {
   type: 'object';
   target: () => InstanceType<any>;
+  isString?: boolean;
 };
 
 export type CheckOptions = CommonCheckOptions &
@@ -41,3 +55,18 @@ export type CheckOptions = CommonCheckOptions &
     | DateCheckOptions
     | ObjectCheckOptions
   );
+
+export type PropertyOptions =
+  | CheckOptions
+  | {
+      name?: string;
+      description: string;
+      example?: any;
+      examples?: any;
+      inputType?: InputComponent;
+      label?: string;
+      prefixText?: string;
+      suffixText?: String;
+      prefixIcon?: Icon;
+      suffixIcon?: Icon;
+    };
