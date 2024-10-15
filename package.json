@@ -4,6 +4,24 @@
   "description": "Fullstack Development Kit",
   "license": "MIT",
   "private": true,
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "lib": "libs",
+    "man": "README.md"
+  },
+  "displayName": "Fullstack Development Kit",
+  "homepage": "https://ahmet-emrebas.github.io/oget/",
+  "keywords": [
+    "fullstack",
+    "typescript",
+    "nx",
+    "typeorm",
+    "class-validator",
+    "restapi",
+    "nestjs",
+    "graphql"
+  ],
   "author": {
     "email": "aemrebas.dev@gmail.com",
     "name": "Ahmet Emrebas",
