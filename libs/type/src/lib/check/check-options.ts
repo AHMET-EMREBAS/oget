@@ -55,18 +55,3 @@ export type CheckOptions = CommonCheckOptions &
     | DateCheckOptions
     | ObjectCheckOptions
   );
-
-export type PropertyOptions =
-  | CheckOptions
-  | {
-      name?: string;
-      description: string;
-      example?: any;
-      examples?: any;
-      inputType?: InputComponent;
-      label?: string;
-      prefixText?: string;
-      suffixText?: String;
-      prefixIcon?: Icon;
-      suffixIcon?: Icon;
-    };
