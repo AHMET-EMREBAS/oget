@@ -1,12 +1,18 @@
 {
   "name": "@oget/source",
   "version": "0.0.0",
+  "description": "Fullstack Development Kit",
   "license": "MIT",
-  "scripts": {
-    "hello": "ts-node ./tools/hello.ts",
-    "doc":"npx @compodoc/compodoc --config=.compodocrc.json"
-  },
   "private": true,
+  "author": {
+    "email": "aemrebas.dev@gmail.com",
+    "name": "Ahmet Emrebas",
+    "url": "https://www.linkedin.com/in/ahmet-emrebas/"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  },
   "devDependencies": {
     "@compodoc/compodoc": "^1.1.26",
     "@eslint/js": "^9.8.0",
