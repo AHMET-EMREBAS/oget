@@ -1,5 +1,5 @@
 import { createCipheriv, createDecipheriv, randomBytes } from 'crypto';
-const algorithm = 'aes-256-cbc'; //Using AES encryption
+
 const key = randomBytes(32);
 const iv = randomBytes(16);
 
