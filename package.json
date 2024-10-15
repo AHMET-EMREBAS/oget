@@ -2,7 +2,9 @@
   "name": "@oget/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "hello": "ts-node ./tools/hello.ts"
+  },
   "private": true,
   "dependencies": {},
   "devDependencies": {
