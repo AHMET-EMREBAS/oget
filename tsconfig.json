@@ -29,6 +29,21 @@
     },
     {
       "path": "./libs/entity"
+    },
+    {
+      "path": "./libs/auth"
+    },
+    {
+      "path": "./examples/db-sample"
+    },
+    {
+      "path": "./examples/check-sample"
+    },
+    {
+      "path": "./examples/module-sample"
+    },
+    {
+      "path": "./examples/auth-sample"
     }
   ]
 }
