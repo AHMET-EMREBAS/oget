@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "hello": "ts-node ./tools/hello.ts"
+    "hello": "ts-node ./tools/hello.ts",
+    "doc":"npx @compodoc/compodoc --config=.compodocrc.json"
   },
   "private": true,
   "devDependencies": {
