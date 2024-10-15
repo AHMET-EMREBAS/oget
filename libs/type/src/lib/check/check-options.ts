@@ -3,8 +3,6 @@ export type StringFormat = string;
 export type CommonCheckOptions = {
   isArray?: boolean;
   required?: boolean;
-  description?: string;
-  example?: any;
 };
 
 export type StringCheckOptions = {
@@ -43,7 +41,3 @@ export type CheckOptions = CommonCheckOptions &
     | DateCheckOptions
     | ObjectCheckOptions
   );
-
-
-
-
