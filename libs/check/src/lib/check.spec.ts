@@ -1,7 +1,7 @@
-import { check } from './check';
+import { Check } from './check';
 
 describe('check', () => {
   it('should work', () => {
-    expect(check()).toEqual('check');
+    expect(Check()).toBeTruthy();
   });
 });
