@@ -18,7 +18,16 @@ export type InputComponent =
   | 'date'
   | 'datetime';
 
-export type StringFormat = string;
+export type StringFormat =
+  | 'email'
+  | 'password'
+  | 'phone'
+  | 'uuid'
+  | 'ip4'
+  | 'ip6'
+  | 'barcode'
+  | 'short'
+  | 'long';
 
 export type RelationType = 'owner' | 'attribute' | 'reference';
 
@@ -27,7 +36,8 @@ export type PropertyOptions = {
   relationType?: RelationType;
   type?: PropertyType;
   target?: () => InstanceType<any>;
-  
+
+  isInt?: boolean;
   inputComponent?: InputComponent;
 
   prefixIcon?: Icon;

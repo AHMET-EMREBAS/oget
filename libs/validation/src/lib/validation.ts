@@ -8,6 +8,8 @@ import {
   IsObject,
   ValidationOptions,
   IsBoolean,
+  IsEmail,
+  IsStrongPassword,
 } from 'class-validator';
 import {} from 'class-transformer';
 
@@ -17,6 +19,22 @@ export function StringValidation(
 ): PropertyDecorator {
   return (t, p) => {
     IsString(vo)(t, p);
+
+    const format = options?.format;
+
+    // Format Validation
+    if (format) {
+      switch (format) {
+        case 'email':
+          IsEmail({}, vo)(t, p);
+          break;
+        case 'password':
+          IsStrongPassword({}, vo)(t, p);
+          break;
+
+        // TODO: add other validations
+      }
+    }
   };
 }
 export function NumberValidation(
@@ -25,6 +43,10 @@ export function NumberValidation(
 ): PropertyDecorator {
   return (t, p) => {
     IsNumber({}, vo)(t, p);
+
+    if (options?.isInt) {
+      IsInt(vo)(t, p);
+    }
   };
 }
 export function BooleanValidation(
@@ -60,7 +82,7 @@ export function ObjectValidation(
 export function Validation(options?: PropertyOptions): PropertyDecorator {
   return (t, p) => {
     const vo: ValidationOptions = { each: !!options?.isArray };
-    
+
     if (options) {
       const { type } = options;
       if (type) {
