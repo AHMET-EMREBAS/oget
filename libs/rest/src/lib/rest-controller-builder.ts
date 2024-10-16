@@ -22,13 +22,13 @@ export type ResourceMetadata = {
 export class RestControllerBuilder {
   private readonly p: RestApiPathBuilder;
 
-  constructor(private readonly options: RestControllerBuilderOptions) {
+  constructor(public readonly options: RestControllerBuilderOptions) {
     this.p = options.pathBuilder;
   }
 
-  private IsPublic(options: ResourceMetadata): MethodDecorator {
+  private IsPublic(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
-      if (options.isPublic) {
+      if (options?.isPublic) {
         PublicMethod()(t, p, d);
       } else {
         ApiBearerAuth()(t, p, d);
@@ -36,10 +36,10 @@ export class RestControllerBuilder {
     };
   }
 
-  Controller(options: ResourceMetadata): ClassDecorator {
+  Controller(options?: ResourceMetadata): ClassDecorator {
     return (t) => {
       Controller()(t);
-      if (options.isPublic === true) {
+      if (options?.isPublic === true) {
         PublicResource()(t);
       } else {
         ApiBearerAuth()(t);
@@ -47,7 +47,7 @@ export class RestControllerBuilder {
     };
   }
 
-  Find(options: ResourceMetadata): MethodDecorator {
+  Find(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Get(this.p.PLURAL)(t, p, d);
       this.IsPublic(options)(t, p, d);
@@ -55,7 +55,7 @@ export class RestControllerBuilder {
     };
   }
 
-  FindOneById(options: ResourceMetadata): MethodDecorator {
+  FindOneById(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Get(this.p.ID)(t, p, d);
       ApiOkResponse({ type: this.options.entity });
@@ -63,7 +63,7 @@ export class RestControllerBuilder {
     };
   }
 
-  Save(options: ResourceMetadata): MethodDecorator {
+  Save(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Post(this.p.SIGNULAR)(t, p, d);
       ApiCreatedResponse({ type: this.options.entity });
@@ -71,7 +71,7 @@ export class RestControllerBuilder {
     };
   }
 
-  Update(options: ResourceMetadata): MethodDecorator {
+  Update(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Put(this.p.ID)(t, p, d);
       ApiOkResponse({ type: UpdateResult });
@@ -79,7 +79,7 @@ export class RestControllerBuilder {
     };
   }
 
-  Delete(options: ResourceMetadata): MethodDecorator {
+  Delete(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Delete(this.p.ID)(t, p, d);
       ApiOkResponse({ type: DeleteResult });
@@ -87,7 +87,7 @@ export class RestControllerBuilder {
     };
   }
 
-  AddRelation(options: ResourceMetadata): MethodDecorator {
+  AddRelation(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Put(this.p.RELATION)(t, p, d);
       ApiOkResponse({ type: RelationResult });
@@ -95,21 +95,21 @@ export class RestControllerBuilder {
     };
   }
 
-  RemoveRelation(options: ResourceMetadata): MethodDecorator {
+  RemoveRelation(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Delete(this.p.RELATION)(t, p, d);
       this.IsPublic(options)(t, p, d);
     };
   }
 
-  SetRelation(options: ResourceMetadata): MethodDecorator {
+  SetRelation(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Post(this.p.RELATION)(t, p, d);
       this.IsPublic(options)(t, p, d);
     };
   }
 
-  UnsetRelation(options: ResourceMetadata): MethodDecorator {
+  UnsetRelation(options?: ResourceMetadata): MethodDecorator {
     return (t, p, d) => {
       Delete(this.p.UNSET_RELATION)(t, p, d);
       ApiOkResponse({ type: RelationResult });

@@ -1,7 +1,13 @@
 import { SetMetadata } from '@nestjs/common';
 import { MetadataTokens } from '@oget/const';
 
-export function Public(): ClassDecorator {
+export function PublicResource(): ClassDecorator {
+  return (t: any) => {
+    SetMetadata(MetadataTokens.PUBLIC, true)(t);
+  };
+}
+
+export function PublicMethod(): MethodDecorator {
   return (t: any) => {
     SetMetadata(MetadataTokens.PUBLIC, true)(t);
   };
