@@ -1,7 +1,6 @@
 import { PropertyOptions } from '@oget/type';
 import {
   IsString,
-  IsPassportNumber,
   IsNumber,
   IsInt,
   IsDate,

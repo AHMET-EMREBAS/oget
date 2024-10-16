@@ -40,6 +40,7 @@ export type PropertyOptions = {
   isInt?: boolean;
   inputComponent?: InputComponent;
 
+  exclude?: boolean;
   prefixIcon?: Icon;
   suffixIcon?: Icon;
 
