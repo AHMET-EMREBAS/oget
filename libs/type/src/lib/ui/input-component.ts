@@ -1,1 +1,15 @@
-export type InputComponent = string;
+export type InputComponent =
+  | 'text'
+  | 'textarea'
+  | 'number'
+  | 'select'
+  | 'autocomplet'
+  | 'chip'
+  | 'button-toggle'
+  | 'switch'
+  | 'radio'
+  | 'checkbox'
+  | 'checkbox-group'
+  | 'slider'
+  | 'date'
+  | 'datetime';

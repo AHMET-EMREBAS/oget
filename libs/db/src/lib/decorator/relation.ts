@@ -1,6 +1,11 @@
 import { RelationOptions } from '@oget/type';
 import { JoinColumn, JoinTable, ManyToMany, ManyToOne } from 'typeorm';
 
+/**
+ * Database table relation column decorator
+ * @param options {@link RelationOptions}
+ * @returns
+ */
 export function Relation(options: RelationOptions): PropertyDecorator {
   return (t, p) => {
     const { type, target } = options;

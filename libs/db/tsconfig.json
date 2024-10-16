@@ -4,6 +4,7 @@
   "include": [],
   "references": [
     { "path": "../const" },
+    { "path": "../common" },
     { "path": "../testing" },
     { "path": "../type" },
     { "path": "./tsconfig.lib.json" },

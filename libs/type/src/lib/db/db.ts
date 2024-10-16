@@ -7,11 +7,40 @@ export type RelationType =
   | 'refs';
 
 export enum RelationTypeEnum {
+  /**
+   * - Required
+   * - Cascade On Delete
+   *
+   */
   OWNER = 'owner',
+
+  /**
+   * - Required
+   * - Cascade On Delete
+   *
+   */
   OWNERS = 'owners',
+
+  /**
+   * - Cascade On Create
+   * - Loose
+   */
   ATTR = 'attr',
+
+  /**
+   * - Cascade On Create
+   * - Loose
+   */
   ATTRS = 'attrs',
+
+  /**
+   * - No Cascade
+   */
   REF = 'ref',
+
+  /**
+   * - No Cascade
+   */
   REFS = 'refs',
 }
 
@@ -21,6 +50,10 @@ export type CommonColumnOptions = {
   required?: boolean;
   hashed?: boolean;
   encripted?: boolean;
+
+  /**
+   * Prevent the value form being updated if set false
+   */
   update?: boolean;
 };
 

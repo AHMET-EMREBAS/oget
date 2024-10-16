@@ -1,2 +1,3 @@
 // @index(['./*', '!./*.{spec,test,story,stories,ignore}.ts'], f => `export * from '${f.path}'`)
-export * from './entity'
+export * from './static'
+export * from './types'

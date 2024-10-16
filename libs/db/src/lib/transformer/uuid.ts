@@ -1,5 +1,5 @@
 import { ValueTransformer } from 'typeorm';
-import { v4 } from 'uuid';
+import { v4 } from '@oget/common';
 
 export function UUIDTransformer(): ValueTransformer {
   return {

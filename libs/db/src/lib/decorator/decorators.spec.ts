@@ -36,7 +36,7 @@ class SampleView {
   @ViewColumn() sampleId: number;
 }
 
-describe('Decorators', () => {
+describe('Database Table Decorators', () => {
   const dateValue = new Date();
 
   let ds: DataSource;
@@ -45,6 +45,7 @@ describe('Decorators', () => {
   let viewRepo: Repository<SampleView>;
 
   let saved: Sample;
+  
   beforeAll(async () => {
     ds = await datasource([Sample, SampleView, Category]);
     sampleRepo = ds.getRepository(Sample);

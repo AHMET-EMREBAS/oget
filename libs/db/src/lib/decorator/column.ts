@@ -3,9 +3,14 @@ import {
   ColumnOptions as TypeOrmColumnOptions,
 } from 'typeorm';
 import { ColumnOptions } from '@oget/type';
-import { toColumnType } from '../utils';
+import { toColumnType } from '../util';
 import { UUIDTransformer } from '../transformer';
 
+/**
+ * Database table column decorator
+ * @param options {@link ColumnOptions} table column options
+ * @returns
+ */
 export function Column(options: ColumnOptions): PropertyDecorator {
   return (t, p) => {
     const { type: cType, update, defaultValue } = options;
