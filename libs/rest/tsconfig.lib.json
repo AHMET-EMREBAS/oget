@@ -10,11 +10,8 @@
   },
   "include": ["src/**/*.ts"],
   "references": [
-    { "path": "../validation/tsconfig.lib.json" },
-    { "path": "../property/tsconfig.lib.json" },
     { "path": "../type/tsconfig.lib.json" },
-    { "path": "../database/tsconfig.lib.json" },
-    { "path": "../entity/tsconfig.lib.json" }
+    { "path": "../const/tsconfig.lib.json" }
   ],
   "exclude": [
     "vite.config.ts",

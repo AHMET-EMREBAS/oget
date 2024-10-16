@@ -1,1 +1,3 @@
 # entity
+
+Common database tables

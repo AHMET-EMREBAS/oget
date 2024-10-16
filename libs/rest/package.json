@@ -1,0 +1,33 @@
+{
+  "name": "@oget/rest",
+  "version": "0.0.1",
+  "dependencies": {
+    "@nestjs/common": "^10.4.5",
+    "@nestjs/swagger": "^7.4.2",
+    "@oget/const": "workspace:^",
+    "@oget/property": "workspace:^",
+    "@oget/type": "workspace:^",
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "rest",
+    "targets": {
+      "test": {
+        "executor": "@nx/vite:test",
+        "outputs": [
+          "{options.reportsDirectory}"
+        ],
+        "options": {
+          "reportsDirectory": "../../coverage/libs/rest"
+        }
+      }
+    }
+  }
+}

@@ -3,16 +3,44 @@
   "compileOnSave": false,
   "files": [],
   "references": [
-    { "path": "./libs/property" },
-    { "path": "./libs/type" },
-    { "path": "./libs/validation" },
-    { "path": "./libs/database" },
-    { "path": "./libs/entity" },
-    { "path": "./libs/model" },
-    { "path": "./libs/const" },
-    { "path": "./examples/module-sample" },
-    { "path": "./examples/check-sample" },
-    { "path": "./examples/auth-sample" },
-    { "path": "./examples/db-sample" }
+    {
+      "path": "./libs/property"
+    },
+    {
+      "path": "./libs/type"
+    },
+    {
+      "path": "./libs/validation"
+    },
+    {
+      "path": "./libs/database"
+    },
+    {
+      "path": "./libs/entity"
+    },
+    {
+      "path": "./libs/model"
+    },
+    {
+      "path": "./libs/const"
+    },
+    {
+      "path": "./examples/module-sample"
+    },
+    {
+      "path": "./examples/check-sample"
+    },
+    {
+      "path": "./examples/auth-sample"
+    },
+    {
+      "path": "./examples/db-sample"
+    },
+    {
+      "path": "./libs/resource"
+    },
+    {
+      "path": "./libs/rest"
+    }
   ]
 }
