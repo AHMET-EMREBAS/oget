@@ -18,8 +18,8 @@ export enum JwtConfig {
 /**
  * Env keys for `DatabaseConfig`
  */
-export enum DatabaseConfig {
-  DATABASE_NAME = 'DATABASE_NAME',
-  DATABASE_USERNAME = 'DATABASE_USERNAME',
-  DATABASE_PASSWORD = 'DATABASE_PASSWORD',
+export enum DbConfig {
+  NAME = 'DATABASE_NAME',
+  USERNAME = 'DATABASE_USERNAME',
+  PASSOWRD = 'DATABASE_PASSWORD',
 }

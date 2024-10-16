@@ -49,6 +49,7 @@ export type DateColumnOptions = {
 
 export type ObjectColumnOptions = {
   type: 'object';
+  target: () => InstanceType<any>;
   defaultValue?: Record<any, any>;
 };
 

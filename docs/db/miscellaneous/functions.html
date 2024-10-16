@@ -112,7 +112,28 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#db" title="src/lib/db.ts" ><b>db</b>&nbsp;&nbsp;&nbsp;(src/.../db.ts)</a>
+                            <a href="#Column" title="src/lib/decorators/column.ts" ><b>Column</b>&nbsp;&nbsp;&nbsp;(src/.../column.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Entity" title="src/lib/decorators/entity.ts" ><b>Entity</b>&nbsp;&nbsp;&nbsp;(src/.../entity.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Primary" title="src/lib/decorators/primary-id.ts" ><b>Primary</b>&nbsp;&nbsp;&nbsp;(src/.../primary-id.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#Relation" title="src/lib/decorators/relation.ts" ><b>Relation</b>&nbsp;&nbsp;&nbsp;(src/.../relation.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#toColumnType" title="src/lib/utils/to-column-type.ts" ><b>toColumnType</b>&nbsp;&nbsp;&nbsp;(src/.../to-column-type.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#UUIDTransformer" title="src/lib/transformer/uuid.ts" ><b>UUIDTransformer</b>&nbsp;&nbsp;&nbsp;(src/.../uuid.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ViewColumn" title="src/lib/decorators/view-column.ts" ><b>ViewColumn</b>&nbsp;&nbsp;&nbsp;(src/.../view-column.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#ViewEntity" title="src/lib/decorators/view.ts" ><b>ViewEntity</b>&nbsp;&nbsp;&nbsp;(src/.../view.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -121,22 +142,148 @@
     </table>
 </section>
 
-    <h3>src/lib/db.ts</h3>
+    <h3>src/lib/decorators/column.ts</h3>
     <section data-compodoc="block-methods">
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="db"></a>
+                    <a name="Column"></a>
                     <span class="name">
-                        <span ><b>db</b></span>
-                        <a href="#db"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>Column</b></span>
+                        <a href="#Column"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>db()</code>
+<code>Column(options: <a href="../undefineds/Column.html" target="_self">ColumnOptions</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/functions.html#Column" target="_self" >ColumnOptions</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>PropertyDecorator</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/decorators/entity.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Entity"></a>
+                    <span class="name">
+                        <span ><b>Entity</b></span>
+                        <a href="#Entity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Entity(options?: <a href="../undefineds/Entity.html" target="_self">EntityOptions</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/functions.html#Entity" target="_self" >EntityOptions</a></code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>ClassDecorator</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/decorators/primary-id.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Primary"></a>
+                    <span class="name">
+                        <span ><b>Primary</b></span>
+                        <a href="#Primary"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Primary()</code>
                 </td>
             </tr>
 
@@ -147,9 +294,294 @@
                 <td class="col-md-4">
 
                         <div class="io-description">
-                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                            <b>Returns : </b>    <code>PropertyDecorator</code>
 
                         </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/decorators/relation.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="Relation"></a>
+                    <span class="name">
+                        <span ><b>Relation</b></span>
+                        <a href="#Relation"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>Relation(options: <a href="../undefineds/Relation.html" target="_self">RelationOptions</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/functions.html#Relation" target="_self" >RelationOptions</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>PropertyDecorator</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/utils/to-column-type.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="toColumnType"></a>
+                    <span class="name">
+                        <span ><b>toColumnType</b></span>
+                        <a href="#toColumnType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>toColumnType(options: <a href="../undefineds/Column.html" target="_self">ColumnOptions</a>)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                            <code><a href="../miscellaneous/functions.html#Column" target="_self" >ColumnOptions</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="../miscellaneous/functions.html#Column" target="_self" >ColumnType</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/transformer/uuid.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="UUIDTransformer"></a>
+                    <span class="name">
+                        <span ><b>UUIDTransformer</b></span>
+                        <a href="#UUIDTransformer"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>UUIDTransformer()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>ValueTransformer</code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/decorators/view-column.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ViewColumn"></a>
+                    <span class="name">
+                        <span ><b>ViewColumn</b></span>
+                        <a href="#ViewColumn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ViewColumn(options?: ViewColumnOptions)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                        <code>ViewColumnOptions</code>
+                                            </td>
+
+                                            <td>
+                                                    Yes
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>PropertyDecorator</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    <h3>src/lib/decorators/view.ts</h3>
+    <section data-compodoc="block-methods">
+    <h3></h3>    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ViewEntity"></a>
+                    <span class="name">
+                        <span ><b>ViewEntity</b></span>
+                        <a href="#ViewEntity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ViewEntity(options: ViewEntityOptions)</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>options</td>
+                                            <td>
+                                                        <code>ViewEntityOptions</code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>    <code>ClassDecorator</code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
                 </td>
             </tr>
         </tbody>

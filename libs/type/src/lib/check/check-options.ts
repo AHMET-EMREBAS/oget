@@ -1,5 +1,3 @@
-import { Icon, InputComponent } from '../ui';
-
 export type StringFormat =
   | 'email'
   | 'password'

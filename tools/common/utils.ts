@@ -11,7 +11,10 @@ export function moveIntoLibrary(lib: string) {
 
 export function generateCompodoc(lib: string) {
   moveIntoLibrary(lib);
+
+  console.log(`[ ${lib} ] Generating docs...`);
   execSync(`compodoc --tsconfig tsconfig.json --output ../../docs/${lib}`);
+  console.log(`[ ${lib} ] Done `);
 }
 
 export function arg(index: number) {

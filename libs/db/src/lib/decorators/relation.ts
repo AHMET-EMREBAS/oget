@@ -26,8 +26,8 @@ export function Relation(options: RelationOptions): PropertyDecorator {
     } else if (type === 'refs') {
       ManyToMany(target, (t: any) => t.id, { eager: true })(t, p);
       JoinTable()(t, p);
+    } else {
+      throw new Error(`Invalid relation type ${type}`);
     }
-
-    throw new Error(`Invalid relation type ${type}`);
   };
 }

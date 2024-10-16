@@ -6,12 +6,11 @@ import { ColumnOptions } from '@oget/type';
 import { toColumnType } from '../utils';
 import { UUIDTransformer } from '../transformer';
 
-export function Column(
-  options: ColumnOptions = { type: 'string' }
-): PropertyDecorator {
+export function Column(options: ColumnOptions): PropertyDecorator {
   return (t, p) => {
-    const nullable = options.required != true;
     const { type: cType, update, defaultValue } = options;
+
+    const nullable = options.required != true;
 
     const type = toColumnType(options);
 
@@ -24,6 +23,7 @@ export function Column(
 
     if (cType === 'string') {
       const { generated } = options;
+
       if (generated === 'uuid') {
         TypeOrmColumn({
           ...common,
@@ -34,15 +34,26 @@ export function Column(
         TypeOrmColumn({ type, nullable, update })(t, p);
       }
     } else if (cType === 'number') {
-      TypeOrmColumn({ ...common })(t, p);
+      if (options.isInt) {
+        TypeOrmColumn({ ...common })(t, p);
+      } else {
+        TypeOrmColumn({
+          ...common,
+          precision: 10,
+          transformer: {
+            to: (v) => v,
+            from: (v) => parseFloat(v),
+          },
+        })(t, p);
+      }
     } else if (cType === 'boolean') {
       TypeOrmColumn({ ...common })(t, p);
     } else if (cType === 'date') {
       TypeOrmColumn({ ...common })(t, p);
     } else if (cType === 'object') {
       TypeOrmColumn({ ...common })(t, p);
+    } else {
+      throw new Error(`Invalid column type ${cType}`);
     }
-
-    throw new Error(`Invalid column type ${cType}`);
   };
 }

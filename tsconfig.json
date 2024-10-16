@@ -47,6 +47,9 @@
     },
     {
       "path": "./libs/hash"
+    },
+    {
+      "path": "./libs/testing"
     }
   ]
 }
