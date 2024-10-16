@@ -36,7 +36,7 @@ class SampleView {
   @ViewColumn() sampleId: number;
 }
 
-describe('DatabseDecorators', () => {
+describe('Decorators', () => {
   const dateValue = new Date();
 
   let ds: DataSource;

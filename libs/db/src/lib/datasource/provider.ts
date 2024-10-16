@@ -1,24 +1,15 @@
-import { DataSourceOptions } from 'typeorm';
-import { Inject, Provider } from '@nestjs/common';
+import { DataSourceOptions } from 'typeorm/browser';
+import { createInjectableResource } from '../utils';
+import { DataSource } from 'typeorm/browser';
 
-export function getDataSourceToken(connectionName = '') {
-  return `${connectionName}DataSource`;
-}
+export const {
+  inject: InjectDataSourceOptions,
+  provide: provideDataSourceOptions,
+  token: getDataSourceOptionsToken,
+} = createInjectableResource<DataSourceOptions>('DataSourceOptions');
 
-export function provideDataSource(
-  options: DataSourceOptions,
-  connectionName = ''
-): Provider {
-  return {
-    provide: getDataSourceToken(connectionName),
-    useValue() {
-      return options;
-    },
-  };
-}
-
-export function InjectDataSource(connectionName = ''): ParameterDecorator {
-  return (t, p, d) => {
-    Inject(getDataSourceToken(connectionName))(t, p, d);
-  };
-}
+export const {
+  inject: InjectDataSource,
+  provide: provideDataSource,
+  token: getDataSourceToken,
+} = createInjectableResource<DataSource>('DataSource');
