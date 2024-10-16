@@ -1,0 +1,30 @@
+{
+  "name": "@oget/resource",
+  "version": "0.0.1",
+  "dependencies": {
+    "@nestjs/common": "^10.4.5",
+    "@oget/entity": "workspace:^",
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!**/*.tsbuildinfo"
+  ],
+  "nx": {
+    "name": "resource",
+    "targets": {
+      "test": {
+        "executor": "@nx/vite:test",
+        "outputs": [
+          "{options.reportsDirectory}"
+        ],
+        "options": {
+          "reportsDirectory": "../../coverage/libs/resource"
+        }
+      }
+    }
+  }
+}
