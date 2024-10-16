@@ -1,14 +1,15 @@
-import {
-  QueryResource,
-  CrudResource,
-  AdvanceResource,
-  QueryOptions,
-  DeleteResponse,
-  UpdateResponse,
-  RelationParam,
-  RelationResponse,
-  UnsetRelationParam,
-} from '@oget/type';
+// import {
+//   QueryResource,
+//   CrudResource,
+//   AdvanceResource,
+//   QueryOptions,
+//   DeleteResponse,
+//   UpdateResponse,
+//   RelationParam,
+//   RelationResponse,
+//   UnsetRelationParam,
+// } from '@oget/type';
+import { QueryResource, QueryOptions } from '@oget/type';
 
 import { RestControllerBuilder } from './rest-controller-builder';
 
