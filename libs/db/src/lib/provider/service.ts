@@ -1,7 +1,7 @@
 import { DynamicProviderOptions, Inject } from '@oget/common';
 import { DataSource } from 'typeorm';
 import { getDataSourceToken } from './datasource';
-import { AdvanceService, QueryService, ResourceService } from '../service';
+import { AdvanceService, QueryService, CrudService } from '../service';
 
 export function createServiceProvider<T>(
   service: InstanceType<any>
@@ -45,7 +45,7 @@ export const {
   inject: InjectResourceService,
   provide: provideResourceService,
   token: getResourceServiceToken,
-} = createServiceProvider<ResourceService>(ResourceService);
+} = createServiceProvider<CrudService>(CrudService);
 
 export const {
   inject: InjectAdvanceService,

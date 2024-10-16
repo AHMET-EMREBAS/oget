@@ -8,7 +8,7 @@ import {
   provideResourceService,
 } from './service';
 import { provideDataSource } from './datasource';
-import { AdvanceService, QueryService, ResourceService } from '../service';
+import { AdvanceService, QueryService, CrudService } from '../service';
 
 class Sample {}
 
@@ -47,7 +47,7 @@ describe('Database Configuration and Service Providers', () => {
       AdvanceService
     );
     expect(context.get(getResourceServiceToken(Sample))).toBeInstanceOf(
-      ResourceService
+      CrudService
     );
   });
 });
