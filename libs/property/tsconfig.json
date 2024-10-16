@@ -3,6 +3,7 @@
   "files": [],
   "include": [],
   "references": [
+    { "path": "../validation" },
     { "path": "../type" },
     { "path": "./tsconfig.lib.json" },
     { "path": "./tsconfig.spec.json" }

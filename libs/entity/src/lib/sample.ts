@@ -31,7 +31,7 @@ export class SampleView {
 
 @Dto()
 export class CreateSampleDto {
-  @Property({ type: 'string' })
+  @Property({ type: 'string', format: 'short' })
   name: string;
 
   @Property({ type: 'object', target: () => IDDto })

@@ -3,6 +3,7 @@
   "files": [],
   "include": [],
   "references": [
+    { "path": "../validation" },
     { "path": "../property" },
     { "path": "../type" },
     { "path": "../database" },
